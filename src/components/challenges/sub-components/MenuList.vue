@@ -1,7 +1,9 @@
 <template>
   <div
     class="container menu-container"
-    :style="{ 'background-image': 'url(../../../assets/bg__left.svg)' }"
+    :style="{
+      'background-image': `url(${cover})`,
+    }"
   >
     <div class="container_cart container_cart-menu">
       <h1>To Go Menu</h1>
@@ -43,6 +45,8 @@ export default {
   components: { check },
   data() {
     return {
+      cover:
+        "https://srizza93.github.io/advent-challenges/src/assets/bg__left.svg",
       menu: [
         {
           id: 1,
