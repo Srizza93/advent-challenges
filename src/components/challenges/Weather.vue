@@ -104,7 +104,7 @@ export default {
     async fetchData() {
       try {
         const url =
-          "http://api.weatherapi.com/v1/forecast.json?key=222453e567f04cfb83305154220201&q=Lille&days=3&aqi=no&alerts=no";
+          "https://api.weatherapi.com/v1/forecast.json?key=222453e567f04cfb83305154220201&q=Lille&days=3&aqi=no&alerts=no";
         const response = await fetch(url)
           .then((response) => response.json())
           .then(

@@ -1,5 +1,10 @@
 <template>
-  <div class="container cart-container">
+  <div
+    class="container cart-container"
+    :style="{
+      'background-image': `url(${cover})`,
+    }"
+  >
     <div class="container_cart container_cart-cart">
       <h1>Your Cart</h1>
       <h3 v-if="cartIsEmpty()">Your cart is empty</h3>
@@ -80,6 +85,12 @@ export default {
       required: true,
     },
   },
+  data() {
+    return {
+      cover:
+        "https://srizza93.github.io/advent-challenges/src/assets/bg__top-right.svg",
+    };
+  },
   methods: {
     getImgUrl(pic) {
       const images = require.context("../../../assets", false, /\.png|svg$/);
@@ -122,7 +133,6 @@ export default {
 <style scoped>
 .cart-container {
   justify-content: flex-start;
-  background-image: url("~../../../assets/bg__top-right.svg");
   background-repeat: no-repeat;
 }
 .container_cart-cart {

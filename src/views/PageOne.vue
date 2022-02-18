@@ -57,7 +57,8 @@ export default {
         {
           id: 7,
           name: "Timer",
-          class: "Timer",
+          class: "timer-container",
+          compName: "Timer",
         },
         {
           id: 8,
