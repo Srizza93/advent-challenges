@@ -43,7 +43,7 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 60px;
+  padding: 40px 80px;
   background-color: #262529;
   border-radius: 25px;
   box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
@@ -54,9 +54,11 @@ export default {
   color: rgb(252, 227, 8);
 }
 .range-slider_slider {
-  width: 500px;
+  display: block;
+  width: 100%;
+  max-width: 500px;
   height: 15px;
-  margin: 80px;
+  margin: 80px 160px;
   background: #4d4c53;
   border-radius: 25px;
   -webkit-appearance: none;
@@ -93,15 +95,11 @@ export default {
   cursor: pointer;
 }
 
-@media screen and (max-width: 800px) {
-  .range-slider {
-    padding: 30px;
-  }
+@media screen and (max-width: 600px) {
   .range-slider_amount {
     font-size: 40px;
   }
   .range-slider_slider {
-    width: 250px;
     height: 10px;
     margin: 60px 40px;
   }

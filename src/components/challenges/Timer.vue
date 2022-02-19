@@ -180,4 +180,17 @@ export default {
 .active_hand {
   display: block;
 }
+
+@media screen and (max-width: 400px) {
+  .timer-container {
+    width: 265px;
+    height: 265px;
+  }
+  .timer-container_gear {
+    margin-top: 10px;
+  }
+  .timer-container_time {
+    margin-bottom: 15px;
+  }
+}
 </style>

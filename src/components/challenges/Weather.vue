@@ -374,4 +374,10 @@ export default {
     top: -50px;
   }
 }
+@media screen and (max-width: 400px) {
+  .weather-container {
+    width: 100%;
+    overflow: auto;
+  }
+}
 </style>

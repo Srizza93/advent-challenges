@@ -148,8 +148,9 @@ export default {
   overflow-y: auto;
 }
 .main-photo_photo-container_wrapper_photo {
-  width: 525px;
-  height: 525px;
+  width: 100%;
+  height: auto;
+  max-width: 600px;
   object-fit: cover;
 }
 .main-photo_photo-container_caption {
@@ -195,6 +196,14 @@ export default {
 @media screen and (max-width: 800px) {
   .main-photo {
     width: 375px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .carousel-container {
+    width: 100%;
+  }
+  .main-photo {
+    width: auto;
   }
 }
 </style>

@@ -71,7 +71,8 @@ export default {
 
 <style scoped>
 .pin-code-container {
-  width: 500px;
+  width: 100%;
+  max-width: 500px;
   height: 415px;
   padding: 70px 35px 30px;
   border-radius: 25px;
@@ -139,9 +140,6 @@ export default {
 }
 
 @media screen and (max-width: 600px) {
-  .pin-code-container {
-    width: auto;
-  }
   .verification-step_input-container_input {
     width: 40px;
     height: 45px;

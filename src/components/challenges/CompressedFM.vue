@@ -327,7 +327,7 @@ export default {
 }
 .container_content_title_name {
   font-size: 16px;
-  padding: 0 20px;
+  padding: 0 0 0 20px;
   color: rgb(88, 88, 88);
 }
 .container_content_title_img {
@@ -369,6 +369,23 @@ export default {
   }
   .container_content-outer {
     margin-top: 85px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .compressed-container {
+    height: 550px;
+  }
+  .container_content-outer {
+    padding: 20px;
+  }
+  .container_content {
+    width: 195px;
+    height: 195px;
+  }
+  .container_content_cover {
+    width: 260px;
+    height: 260px;
   }
 }
 </style>

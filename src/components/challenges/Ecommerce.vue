@@ -29,7 +29,7 @@ export default {
 .e-commerce-container {
   display: flex;
   flex-direction: row;
-  width: 700px;
+  max-width: 700px;
   background-color: white;
 }
 .container {
@@ -52,7 +52,6 @@ export default {
 @media screen and (max-width: 800px) {
   .e-commerce-container {
     flex-direction: column;
-    width: 320px;
   }
   .container {
     width: auto;

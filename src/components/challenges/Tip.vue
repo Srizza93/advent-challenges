@@ -229,4 +229,19 @@ export default {
     font-size: 16px;
   }
 }
+
+@media screen and (max-width: 400px) {
+  .tip-container {
+    max-width: 280px;
+  }
+  .input-container_containers {
+    padding: 65px 25px 45px;
+  }
+  .percentages-container_percentage {
+    margin: 5px;
+  }
+  .percentages-container_percentage_label {
+    padding: 5px;
+  }
+}
 </style>
