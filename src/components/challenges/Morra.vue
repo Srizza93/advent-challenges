@@ -107,7 +107,6 @@ export default {
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  width: 100%;
   padding: 30px;
   font-family: "Roboto Mono", monospace;
   background-color: white;
@@ -126,9 +125,10 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 325px;
-  height: 355px;
-  padding: 30px;
+  width: 100%;
+  max-width: 325px;
+  height: auto;
+  padding: 5px;
   margin: 30px;
   border: 2px solid black;
   cursor: pointer;
@@ -138,6 +138,7 @@ export default {
 }
 .game-container_img-container_img {
   display: block;
+  width: 100%;
   max-width: 250px;
   max-height: 250px;
 }
@@ -153,6 +154,7 @@ export default {
 }
 .game-over_images-container_img {
   display: block;
+  width: 100%;
   max-width: 300px;
   max-height: 300px;
   margin: 30px;

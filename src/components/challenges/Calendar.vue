@@ -102,7 +102,9 @@ export default {
   },
   methods: {
     updateToday() {
-      this.shownDate = this.todayDate;
+      this.shownDate.year = this.todayDate.year;
+      this.shownDate.month = this.todayDate.month;
+      this.shownDate.day = this.todayDate.day;
     },
     highlightToday() {
       if (
@@ -112,6 +114,10 @@ export default {
         const today = document.querySelector(`.day-${this.todayDate.day}`);
         today.classList.add("today");
         return;
+      }
+      const highlighted = document.querySelector(".today");
+      if (highlighted) {
+        highlighted.classList.remove("today");
       }
     },
     slicedMonth(line) {
@@ -149,7 +155,8 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  width: 470px;
+  width: 100%;
+  max-width: 470px;
   padding: 25px;
   border-radius: 25px;
   background-color: white;
@@ -179,6 +186,9 @@ export default {
 .current-month-container_chevron:hover {
   border: 2px solid #0071c2;
 }
+.current-month-container_year-month {
+  margin: 0 10px;
+}
 .chevron-right {
   transform: rotate(180deg);
 }
@@ -196,9 +206,15 @@ export default {
   font-weight: bold;
 }
 
-@media screen and (max-width: 600px) {
-  .calendar-container {
-    width: 370px;
+@media screen and (max-width: 240px) {
+  .current-month-container {
+    flex-direction: column;
+  }
+  .current-month-container_year-month {
+    margin: 15px 0;
+  }
+  .weeks-container_weekdays {
+    font-size: 16px;
   }
 }
 </style>

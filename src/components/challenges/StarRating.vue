@@ -68,6 +68,8 @@ export default {
 .star-rating-container {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  max-width: 600px;
   padding: 50px;
   border-radius: 25px;
   background-color: aliceblue;
@@ -80,26 +82,18 @@ export default {
 .stars-container {
   display: flex;
   flex-direction: row;
+  justify-content: center;
   margin: 50px;
 }
 .stars-container_star {
-  width: 100px;
+  min-width: 25px;
+  max-width: 100px;
   cursor: pointer;
 }
 
-@media screen and (max-width: 700px) {
-  .stars-container_star {
-    width: 75px;
-  }
-}
-@media screen and (max-width: 600px) {
-  .stars-container_star {
-    width: 50px;
-  }
-}
 @media screen and (max-width: 450px) {
-  .stars-container_star {
-    width: 30px;
+  .star-rating-container {
+    padding: 25px 0;
   }
 }
 </style>

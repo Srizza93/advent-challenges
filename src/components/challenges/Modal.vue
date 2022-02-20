@@ -1,11 +1,6 @@
 <template>
   <div class="modal-container">
-    <div
-      class="modal-container_background"
-      v-bind:class="{ 'photo-blur': visible }"
-    >
-      <div class="modal-container_modal" @click="showContent"></div>
-    </div>
+    <div class="modal-container_modal" @click="showContent"></div>
     <div
       class="modal-container_hidden-content"
       v-bind:class="{ 'hidden-content-visible': visible }"
@@ -72,25 +67,21 @@ export default {
 <style scoped>
 .modal-container {
   position: relative;
-  width: 680px;
+  width: 100%;
+  max-width: 680px;
   height: 485px;
   font-weight: bold;
-}
-.modal-container_background {
-  height: 100%;
-  position: relative;
+  border-radius: 15px;
   background: url("../../assets/bg.jpg");
   background-repeat: no-repeat;
   background-size: contain;
-  border-radius: 25px;
 }
 .photo-blur {
   filter: blur(8px);
 }
 .modal-container_modal {
-  position: absolute;
-  top: 70px;
-  left: 70px;
+  margin-top: 10%;
+  margin-left: 13%;
   width: 20px;
   height: 20px;
   border-radius: 50%;
@@ -104,10 +95,10 @@ export default {
   display: none;
   position: absolute;
   top: 20px;
-  left: calc(50% - 250px);
+  left: 10%;
   flex-direction: row;
-  width: 500px;
-  height: 450px;
+  width: 80%;
+  height: auto;
   padding: 20px;
   border-radius: 25px;
   background-color: white;
@@ -144,7 +135,6 @@ export default {
   border: none;
   border-radius: 25px;
   font-weight: bold;
-  white-space: nowrap;
   cursor: pointer;
 }
 .modal-container_hidden-content_sub-container_button:hover {
@@ -168,16 +158,25 @@ export default {
   }
 }
 
-@media screen and (max-width: 700px) {
-  .modal-container {
-    width: 375px;
-    height: 285px;
-  }
+@media screen and (max-width: 650px) {
   .modal-container_hidden-content {
     flex-direction: column-reverse;
-    left: calc(50% - 150px);
-    max-width: 300px;
-    height: fit-content;
+  }
+  .modal-container_hidden-content_sub-container {
+    align-items: center;
+  }
+  .modal-container_hidden-content_img-container_img {
+    width: 100%;
+    max-width: 200px;
+  }
+  .modal-container_hidden-content_sub-container_title {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 490px) {
+  .modal-container {
+    height: 350px;
   }
 }
 </style>

@@ -76,18 +76,19 @@ export default {
 .questions-container {
   display: flex;
   flex-direction: column;
+  width: 100%;
   font-family: "Open Sans", sans-serif;
   font-weight: bold;
-  width: 750px;
 }
 .answers-container {
   position: relative;
+  width: 55%;
   padding: 20px 20px 40px 20px;
-  margin: 35px 0 75px 0;
+  margin: 35px auto 150px auto;
   cursor: pointer;
 }
 .answers-container_answers {
-  padding: 70px 50px 0 50px;
+  padding: 80px 50px 0 50px;
 }
 .answers-container:nth-child(even) {
   background-color: #ffdd00;
@@ -135,18 +136,9 @@ export default {
   fill: black;
   transform: rotate(-90deg);
 }
-
-@media screen and (max-width: 800px) {
-  .questions-container {
-    width: 350px;
-  }
-}
 @media screen and (max-width: 600px) {
-  .questions-container {
-    width: 150px;
-  }
   .answers-container {
-    margin-top: 100px;
+    margin-right: 10px;
   }
   .answers-container_answers {
     padding: 150px 25px 0 25px;

@@ -141,11 +141,16 @@ export default {
   max-height: min-content;
 }
 .logo {
-  width: 200px;
+  max-width: 200px;
   margin-bottom: 20px;
 }
 .player-container {
-  max-width: min-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.youtube-iframe {
+  width: 100%;
 }
 .player-container_title-container {
   display: flex;
@@ -159,6 +164,9 @@ export default {
 }
 .chevron {
   width: 20px;
+  height: 20px;
+  margin-top: auto;
+  margin-bottom: auto;
   padding: 3px;
   fill: white;
   transform: rotate(-90deg);
@@ -185,11 +193,12 @@ export default {
 }
 .gallery-container_iframe-container_img {
   display: block;
-  width: 120px;
-  height: 90px;
+  width: 100%;
+  max-width: 120px;
+  height: auto;
 }
 .gallery-container_iframe-container_title {
-  max-width: 200px;
+  max-width: 400px;
   padding: 5px 0 0 20px;
   color: white;
   overflow: hidden;
@@ -215,21 +224,18 @@ export default {
   .player-container_description-container {
     margin-bottom: 30px;
   }
-}
-@media screen and (max-width: 800px) {
-  .youtube-iframe {
-    max-width: 350px;
+  .gallery-container {
+    width: 100%;
+    padding: 0;
   }
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 470px) {
   .youtube-container {
+    width: 100%;
     padding: 20px;
   }
-  .youtube-iframe {
-    max-width: 300px;
-  }
-  .gallery-container {
-    padding: 0 10px;
+  .gallery-container_iframe-container_title {
+    max-width: 200px;
   }
 }
 </style>
