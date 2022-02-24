@@ -188,6 +188,8 @@ export default {
 .password-container {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  max-width: 600px;
   padding: 50px 30px;
   border-radius: 15px;
   background-color: rgb(211 225 212);
@@ -199,7 +201,8 @@ export default {
   margin-bottom: 30px;
 }
 .password-input-container_input {
-  width: 400px;
+  width: 100%;
+  min-width: 150px;
   padding: 10px;
   border: none;
   border-radius: 5px;
@@ -239,9 +242,11 @@ export default {
   margin-bottom: 15px;
 }
 .range-container_slider {
-  width: 250px;
+  width: 100%;
+  min-width: 150px;
+  max-width: 450px;
   height: 5px;
-  margin-right: 20px;
+  margin: 0 20px 20px 0;
   background: rgb(154, 200, 211);
   border-radius: 25px;
   -webkit-appearance: none;
@@ -312,7 +317,7 @@ export default {
 
 /* Style the checkmark/indicator */
 .checkbox-container .checkbox-container_checkmark:after {
-  left: 9px;
+  left: 8px;
   top: 5px;
   width: 5px;
   height: 10px;
@@ -323,20 +328,24 @@ export default {
   transform: rotate(45deg);
 }
 
-@media screen and (max-width: 600px) {
-  .password-input-container_input {
-    width: 300px;
-  }
+.checkbox-container_text {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
-@media screen and (max-width: 505px) {
-  .password-input-container_input {
-    width: 200px;
+@media screen and (max-width: 350px) {
+  .range-container {
+    flex-direction: column;
   }
-}
-@media screen and (max-width: 415px) {
-  .password-input-container_input,
   .range-container_slider {
-    width: 150px;
+    margin-right: 0;
+  }
+  .password-input-container {
+    flex-direction: column-reverse;
+  }
+  .password-input-container_icon-container {
+    margin: 10px 0;
   }
 }
 </style>

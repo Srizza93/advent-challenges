@@ -1,18 +1,14 @@
 <template>
   <div class="pagination-container">
     <table
+      class="pagination-container_table"
       border="0"
       align="center"
       cellpadding="0"
       cellspacing="30"
-      class="table-container"
     >
       <tr>
-        <td
-          :class="'table-container_title-container-' + option.name"
-          v-for="option in sortOptions"
-          :key="option.id + option.name"
-        >
+        <td v-for="option in sortOptions" :key="option.id + option.name">
           <table>
             <tr>
               <th class="table-container_highlight" :name="option.name">
@@ -399,24 +395,14 @@ export default {
 
 <style scoped>
 .pagination-container {
+  width: 100%;
+  max-width: 1000px;
   background-color: #f8f8ff;
   font-family: Arial, Helvetica, sans-serif;
+  overflow-x: scroll;
 }
-.table-container {
-  table-layout: fixed;
-  width: 100%;
-}
-.table-container_title-container-id {
-  width: 5%;
-}
-.table-container_title-container-name {
-  width: 30%;
-}
-.table-container_title-container-email {
-  width: 35%;
-}
-.table-container_title-container-title {
-  width: 30%;
+.pagination-container_table {
+  width: max-content;
 }
 .table-container_highlight,
 .table-container_highlight > input {
@@ -428,6 +414,7 @@ export default {
   border: none;
   background: none;
   font-size: 16px;
+  text-overflow: ellipsis;
 }
 .sort-up {
   margin-left: 5px;

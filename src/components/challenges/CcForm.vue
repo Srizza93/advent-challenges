@@ -159,6 +159,8 @@ export default {
 <style scoped>
 .cc-form-container {
   position: relative;
+  width: 100%;
+  max-width: 500px;
   margin-top: 220px !important;
 }
 .form-container {
@@ -187,7 +189,7 @@ export default {
 }
 .cc-card-img {
   width: 400px;
-  height: 245px;
+  height: auto;
 }
 .cc-front-outer,
 .cc-back-outer {
@@ -218,6 +220,7 @@ export default {
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  white-space: nowrap;
 }
 .cc-front-outer_cc-front-inner_cc-number {
   top: 110px;
@@ -267,7 +270,7 @@ export default {
   flex-direction: row;
 }
 .inputs-container_input-container_input {
-  min-width: 125px;
+  width: 100%;
   height: 40px;
   padding: 10px;
   border-radius: 5px;
@@ -290,9 +293,36 @@ export default {
   cursor: pointer;
 }
 
-@media screen and (max-width: 540px) {
+@media screen and (max-width: 500px) {
   .inputs-container {
     flex-direction: column;
+  }
+}
+@media screen and (max-width: 330px) {
+  .cc-card-img-container {
+    left: calc(50% - 100px);
+    top: -50px;
+    width: 200px;
+  }
+  .cc-card-img {
+    width: 200px;
+    height: auto;
+  }
+  .cc-front-details {
+    font-size: 11px;
+  }
+  .cc-front-outer_cc-front-inner_cc-number {
+    top: 60px;
+    left: 35px;
+  }
+  .cc-front-outer_cc-front-inner_cc-expiration {
+    top: 74px;
+    left: 107px;
+  }
+  .cc-front-outer_cc-front-inner_cc-name {
+    top: 90px;
+    left: 35px;
+    font-size: 7px;
   }
 }
 </style>

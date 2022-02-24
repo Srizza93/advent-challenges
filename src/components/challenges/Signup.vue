@@ -161,7 +161,9 @@ export default {
 .signup-container {
   display: flex;
   flex-direction: column;
-  padding: 150px 200px;
+  width: 100%;
+  max-width: 500px;
+  padding: 75px 50px;
   border-radius: 15px;
   background-color: white;
   font-family: Arial, Helvetica, sans-serif;
@@ -180,7 +182,6 @@ export default {
   flex-direction: row;
   align-items: center;
   position: relative;
-  width: 260px;
   height: 60px;
   padding: 10px 0 10px 10px;
   margin: 10px 0;
@@ -249,11 +250,5 @@ export default {
   width: 100px;
   font-size: 14px;
   color: red;
-}
-
-@media screen and (max-width: 700px) {
-  .signup-container  {
-    padding: 75px 50px;
-  }
 }
 </style>

@@ -143,6 +143,8 @@ export default {
 .tabbed-content-container {
   display: flex;
   flex-direction: row;
+  width: 100%;
+  max-width: 1000px;
   background-color: black;
   padding: 0 50px;
   font-family: "Roboto", sans-serif;
@@ -151,7 +153,7 @@ export default {
   display: flex;
   flex-direction: column;
   position: relative;
-  width: 400px;
+  width: 40%;
   padding: 50px 50px 50px 0;
   border-right: 2px solid #fbff00;
 }
@@ -204,7 +206,7 @@ export default {
 .episode-container {
   display: flex;
   flex-direction: row;
-  width: 500px;
+  width: 60%;
   padding: 100px 0 50px 50px;
   color: white;
 }
@@ -230,42 +232,33 @@ export default {
   opacity: 0.7;
 }
 
-@media screen and (max-width: 1050px) {
-  .menu-container,
-  .episode-container {
-    width: 200px;
-  }
-
+@media screen and (max-width: 930px) {
   .episode-container {
     flex-direction: column;
   }
-
-  .episode-container_cover {
-    width: 180px;
-    height: 180px;
-  }
-
   .episode-container_info {
-    margin: 30px;
+    margin: 30px 0;
+  }
+  .episode-container_cover {
+    width: 100%;
+    height: auto;
+    max-width: 250px;
   }
 }
-@media screen and (max-width: 515px) {
-  .menu-container,
+@media screen and (max-width: 390px) {
+  .tabbed-content-container {
+    padding: 0 10px;
+  }
+  .menu-container {
+    padding: 50px 10px 50px 0;
+  }
   .episode-container {
-    width: 150px;
+    padding: 100px 0 50px 30px;
   }
-
-  .episode-container {
-    flex-direction: column;
-  }
-
-  .episode-container_cover {
-    width: 130px;
-    height: 130px;
-  }
-
-  .episode-container_info {
-    margin: 15px;
+  .menu-container_episodes_episode_title,
+  .episode-container_info_title {
+    font-size: 18px;
+    word-break: break-word;
   }
 }
 </style>

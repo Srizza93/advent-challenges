@@ -191,6 +191,7 @@ export default {
   display: flex;
   flex-direction: row;
   position: relative;
+  width: 100%;
   max-width: 700px;
   padding: 30px;
   border-radius: 15px;
@@ -200,7 +201,7 @@ export default {
 .table-contents {
   display: flex;
   flex-direction: column;
-  max-width: 50%;
+  max-width: 40%;
   flex-shrink: 0;
   padding: 100px 30px;
   color: #505050;
@@ -238,10 +239,16 @@ export default {
 
 @media screen and (max-width: 700px) {
   .table-contents-container {
-    max-width: 90%;
+    padding: 30px 10px;
   }
   .content-container_main-title {
     font-size: 30px;
+  }
+  .table-contents {
+    padding: 100px 10px;
+  }
+  .content-container {
+    padding: 0 10px;
   }
 }
 </style>

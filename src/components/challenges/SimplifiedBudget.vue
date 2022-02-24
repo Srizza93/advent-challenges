@@ -50,12 +50,18 @@
             v-for="(expense, index) in expenses"
             :key="index + expense.vendor"
           >
-            <span>{{ expense.vendor }}</span>
             <span
-              class="main-container_expenses-container_expenses_expense_cost"
+              class="main-container_expenses-container_expenses_expense_content"
+              >{{ expense.vendor }}</span
+            >
+            <span
+              class="main-container_expenses-container_expenses_expense_cost main-container_expenses-container_expenses_expense_content"
               >${{ expense.cost }}</span
             >
-            <trash class="trash" @click="deleteExpense(expense)" />
+            <trash
+              class="trash main-container_expenses-container_expenses_expense_content"
+              @click="deleteExpense(expense)"
+            />
           </div>
         </div>
       </div>
@@ -127,7 +133,8 @@ export default {
 .simplified-budget-container {
   display: flex;
   flex-direction: column;
-  width: 95%;
+  width: 100%;
+  max-width: 1000px;
   color: white;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -181,6 +188,8 @@ export default {
   flex-direction: column;
   padding: 50px;
   width: 50%;
+  max-height: 575px;
+  overflow: auto;
   background-color: black;
 }
 .main-container_expenses-container_title {
@@ -189,6 +198,7 @@ export default {
 .main-container_expenses-container_expenses_expense {
   display: flex;
   flex-direction: row;
+  align-items: center;
   padding-bottom: 15px;
   margin: 15px 0;
   border-bottom: 1px solid rgb(118, 118, 118);
@@ -220,6 +230,9 @@ export default {
 }
 
 @media screen and (max-width: 730px) {
+  .main-container_budget-container {
+    padding: 15px;
+  }
   .main-container_budget-container_expenses-container {
     flex-direction: column;
   }
@@ -227,16 +240,33 @@ export default {
   .main-container_budget-container_input-container {
     width: 100%;
   }
+  .main-container_expenses-container {
+    max-height: 880px;
+  }
+  .main-container_expenses-container_expenses_expense {
+    flex-direction: column;
+  }
+  .main-container_expenses-container_expenses_expense_content {
+    margin: 15px 0;
+  }
 }
-@media screen and (max-width: 515px) {
-  .main-container_budget-container {
-    padding: 25px;
+@media screen and (max-width: 440px) {
+  .main-container_budget-container_main-title,
+  .main-container_expenses-container_title,
+  .end-amounts-container {
+    font-size: 16px;
+    word-break: break-word;
   }
-  .main-container_budget-container_main-title {
-    font-size: 25px;
+  .main-container_budget-container_input-container {
+    padding: 20px 5px;
+    text-align: center;
+    word-break: break-word;
   }
-  .main-container_expenses-container_expenses_expense_cost {
-    margin-right: 15px;
+  .main-container_budget-container_input-container_input {
+    text-align: center;
+  }
+  .end-amounts-container {
+    padding: 30px 5px;
   }
 }
 </style>
