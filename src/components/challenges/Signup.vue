@@ -239,16 +239,47 @@ export default {
   flex-direction: row;
   align-items: center;
   position: absolute;
-  left: 270px;
+  left: calc(100% + 5px);
+  width: 100%;
 }
 .signup-form_requirement-container_validation-container_check-mark {
-  width: 20px;
-  height: 20px;
+  width: 100%;
+  max-width: 20px;
+  height: auto;
   margin-right: 5px;
 }
 .signup-form_requirement-container_validation-container_error {
   width: 100px;
   font-size: 14px;
   color: red;
+}
+
+@media screen and (max-width: 670px) {
+  .signup-form_requirement-container {
+    margin: 20px 0;
+  }
+  .signup-submit {
+    margin-top: 20px;
+  }
+  .signup-form_requirement-container_validation-container {
+    top: 60px;
+    left: 5px;
+  }
+  .signup-form_requirement-container_validation-container_error {
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 310px) {
+  .signup-form_requirement-container_label {
+    left: 0;
+  }
+  .signup-form_requirement-container_validation-container {
+    top: 20px;
+    left: calc(100% + 5px);
+  }
+  .signup-form_requirement-container_validation-container_error {
+    display: none;
+  }
 }
 </style>

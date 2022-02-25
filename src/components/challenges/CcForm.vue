@@ -175,7 +175,7 @@ export default {
   position: absolute;
   left: calc(50% - 200px);
   top: -100px;
-  width: 400px;
+  width: min-content;
   height: 245px;
   background-color: transparent;
   perspective: 1000px;
@@ -223,7 +223,7 @@ export default {
   white-space: nowrap;
 }
 .cc-front-outer_cc-front-inner_cc-number {
-  top: 110px;
+  top: 115px;
   left: 70px;
   font-size: 22px;
 }
@@ -298,11 +298,10 @@ export default {
     flex-direction: column;
   }
 }
-@media screen and (max-width: 330px) {
+@media screen and (max-width: 400px) {
   .cc-card-img-container {
     left: calc(50% - 100px);
     top: -50px;
-    width: 200px;
   }
   .cc-card-img {
     width: 200px;

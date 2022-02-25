@@ -238,8 +238,9 @@ export default {
 .range-container {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: baseline;
   margin-bottom: 15px;
+  white-space: nowrap;
 }
 .range-container_slider {
   width: 100%;
@@ -337,6 +338,7 @@ export default {
 @media screen and (max-width: 350px) {
   .range-container {
     flex-direction: column;
+    align-items: center;
   }
   .range-container_slider {
     margin-right: 0;
